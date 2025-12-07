@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增教师 - 教育管理系统</title>
+    <!-- 这里我们将在下一个模块添加CSS样式 -->
+</head>
+<body>
+    <div class="container">
+        <h1>新增教师</h1>
+        
+        <form id="teacherForm">
+            <div class="form-section">
+                <h2 class="section-title">基本信息</h2>
+                
+                <div class="form-grid">
+                    <!-- 第一行：教师姓名和电子邮件 -->
+                    <div class="form-group">
+                        <label for="teacherName" class="required">教师姓名</label>
+                        <input type="text" id="teacherName" name="teacherName" placeholder="请输入教师姓名">
+                        <div class="error-message" id="nameError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="required">电子邮件</label>
+                        <input type="email" id="email" name="email" placeholder="请输入电子邮件">
+                        <div class="error-message" id="emailError"></div>
+                    </div>
+                    
+                    <!-- 第二行：联系电话和性别 -->
+                    <div class="form-group">
+                        <label for="phone" class="required">联系电话</label>
+                        <input type="tel" id="phone" name="phone" placeholder="请输入联系电话" maxlength="11">
+                        <div class="error-message" id="phoneError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="gender" class="required">性别</label>
+                        <select id="gender" name="gender">
+                            <option value="">请选择</option>
+                            <option value="male">男</option>
+                            <option value="female">女</option>
+                        </select>
+                        <div class="error-message" id="genderError"></div>
+                    </div>
+                    
+                    <!-- 第三行：教育和所属部门 -->
+                    <div class="form-group">
+                        <label for="education" class="required">教育</label>
+                        <select id="education" name="education">
+                            <option value="">请选择</option>
+                            <option value="doctor">博士</option>
+                            <option value="master">硕士</option>
+                            <option value="bachelor">本科</option>
+                            <option value="college">专科</option>
+                            <option value="highschool">高中</option>
+                            <option value="middleschool">初中</option>
+                            <option value="primaryschool">小学</option>
+                        </select>
+                        <div class="error-message" id="educationError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="department" class="required">所属部门</label>
+                        <select id="department" name="department">
+                            <option value="">请选择所属部门</option>
+                            <option value="math">数学系</option>
+                            <option value="physics">物理系</option>
+                            <option value="chemistry">化学系</option>
+                            <option value="english">英语系</option>
+                            <option value="history">历史系</option>
+                        </select>
+                        <div class="error-message" id="departmentError"></div>
+                    </div>
+                    
+                    <!-- 第四行：出生日期和加入日期 -->
+                    <div class="form-group">
+                        <label for="birthDate">出生日期</label>
+                        <input type="date" id="birthDate" name="birthDate">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="joinDate" class="required">加入日期</label>
+                        <input type="date" id="joinDate" name="joinDate">
+                        <div class="error-message" id="joinDateError"></div>
+                    </div>
+                    
+                    <!-- 第五行：登录密码和确认密码 -->
+                    <div class="form-group">
+                        <label for="password" class="required">登录密码</label>
+                        <input type="password" id="password" name="password" placeholder="请输入系统登录密码">
+                        <div class="error-message" id="passwordError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirmPassword" class="required">确认密码</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="请再次输入密码">
+                        <div class="error-message" id="confirmPasswordError"></div>
+                    </div>
+                    
+                    <!-- 头像部分 - 横跨两列 -->
+                    <div class="form-group full-width">
+                        <div class="avatar-section">
+                            <div class="avatar-preview" id="avatarPreview">
+                                <div class="avatar-placeholder">头像预览</div>
+                                <img id="avatarImage" src="" alt="头像预览">
+                            </div>
+                            <div class="avatar-upload">
+                                <label for="avatar">头像照片</label>
+                                <input type="file" id="avatar" name="avatar" accept=".jpg,.jpeg,.png">
+                                <div class="error-message" id="avatarError"></div>
+                                <p style="font-size: 12px; color: #666; margin-top: 5px;">支持JPG、JPEG、PNG格式，文件大小不超过1M</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 按钮区域 -->
+            <div class="button-group">
+                <button type="button" class="btn-cancel" id="cancelBtn">取消</button>
+                <button type="button" class="btn-save" id="saveBtn">保存</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- 这里我们将在后续模块添加JavaScript -->
+</body>
+</html>
